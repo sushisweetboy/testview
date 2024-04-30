@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&family=Protest+Revolution&family=Sriracha&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="level2.css">
+    <title>Document</title>
+</head>
+<style>
+     h1{
+        text-align: center;
+        font-weight: 800;
+        color: #f74dc4;
+        text-shadow: 5px 5px 15px  #f74dc4;
+        font-family: "Sriracha", cursive;
+       
+    }
+    body{
+        background-color: black;
+      
+        
+    }
+    a {
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    align-items: center;
+    bottom: -100px;
+    transition: 0.5s;
+    z-index: 1;
+    left: 45%;
+ 
+}
+
+a:hover {
+    letter-spacing: 0.25em;
+    background: transparent;
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+    z-index: -1;
+}
+
+a span {
+    position: relative;
+    z-index: 2;
+}
+
+a i {
+    position: absolute;
+    inset: 0;
+    display: block;
+    z-index: 0;
+}
+
+a i::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #27282c;
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+a:hover i::before {
+    left: 0%;
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 40px 39px var(--clr);
+   background: transparent;
+}
+
+a i::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 0;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+    z-index: 2;
+}
+
+a:hover i::after {
+    left: 100%;
+    transform: translateX(-50%) rotate(-45deg);
+    box-shadow: 40px 39px var(--clr);
+}
+.header{
+    width: 60%;
+   
+    margin-left: 210px;
+}
+.picture{
+    width: 50%;
+    
+     margin-left: 22%;
+}
+</style>
+<body>
+       <div class="header">
+        <h1>เกมส์นี้เป็นจับคู่ภาพ  ในรูปภาพ 12 ภาพ  6 คู่  เปิดภาพได้ทีละ 2 ภาพ ถ้าภาพเหมือนกันรูปภาพจะเปิดค้างไว้
+            แต่ถ้าไม่เหมือนกันรูปภาพจะถูกพับปิด คุณมีโอกาสผิดได้ 10 ถ้ามากกว่านั้น จะถือว่าคุณแพ้ทันที ลองดูตัวอย่างด้านล่าง</h1>
+       </div>
+
+          <section class="memory-game picture">
+            <div class="memory-card" data-framework="money">
+                <img class="frontface" src="monkey.webp" alt="teng">
+                <img class="backface" src="questionmark.jpg" alt="questionmark">
+              </div>
+          
+              <div class="memory-card" data-framework="dinosaur">
+                <img class="frontface" src="dinosaur-found-china.jpg" alt="teng">
+                <img class="backface" src="questionmark.jpg" alt="questionmark">
+              </div>
+          
+              <div class="memory-card" data-framework="money">
+                <img class="frontface" src="monkey.webp" alt="ob">
+                <img class="backface" src="questionmark.jpg" alt="questionmark">
+              </div>
+          
+              <div class="memory-card" data-framework="dinosaur">
+                <img class="frontface" src="dinosaur-found-china.jpg" alt="ob">
+                <img class="backface" src="questionmark.jpg" alt="questionmark">
+              </div>
+          </section>
+            
+          
+          
+      
+</body>
+<script src="level2.js">
+   
+</script>
+
+</html>
